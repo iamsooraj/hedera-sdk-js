@@ -134,7 +134,7 @@ export class TransactionReceipt {
     // NOT A STABLE API
     public static _fromProto(receipt: ProtoTransactionReceipt): TransactionReceipt {
         return new TransactionReceipt(
-            Status._fromCode(receipt.getStatus()),
+            new Status(receipt.getStatus()),
             receipt.hasAccountid() ? AccountId._fromProto(receipt.getAccountid()!) : null,
             receipt.hasFileid() ? FileId._fromProto(receipt.getFileid()!) : null,
             receipt.hasContractid() ?

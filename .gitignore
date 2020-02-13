@@ -22,6 +22,3 @@ __tests__/**/*.js
 
 # Docs
 docs/
-
-# Emacs
-.log/
